@@ -1,0 +1,26 @@
+#+title: Readme sound paths
+
+Put your sounds in the folders
+
+
+
+Number your file names:
+
+
+/example/
+
+=stereo= folder:
+
+001_recording1.wav
+
+002__recording2.wav
+
+...etc.
+
+=sounds_drums->drums= folder:
+
+001_kick1.wav
+
+002_snare1_.wav
+
+...etc.
