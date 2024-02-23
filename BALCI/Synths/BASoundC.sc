@@ -30,7 +30,7 @@ obj.initPattern;
 init{ arg n;
 fork{
 //SynthDef
-~samplespath = Platform.userExtensionDir +/+ "BASynths/sounds/stereo/"; // drums
+~samplespath = Platform.userExtensionDir +/+ "BALC-lib/sounds/stereo/"; // drums
 ~bufferSoundC = (~samplespath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 ~bufferSoundC.postln;

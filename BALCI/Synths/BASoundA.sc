@@ -30,7 +30,7 @@ BASoundA{
 	init{ arg n;
 		fork{
 	//SynthDef
-							~samplespath = Platform.userExtensionDir +/+ "BASynths/sounds/stereo/"; // drums
+							~samplespath = Platform.userExtensionDir +/+ "BALC-lib/sounds/stereo/"; // drums
 	~bufferSoundA = (~samplespath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 	~bufferSoundA.postln;

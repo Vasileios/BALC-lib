@@ -42,22 +42,22 @@ server.waitForBoot{
 //Buffer.alloc(s, 40000, 2);
 
 //~dict = ["kick1", "kick2", "snare"];
-	~percpath = Platform.userExtensionDir +/+ "BASynths/sounds/sounds_drums/drums/";
+	~percpath = Platform.userExtensionDir +/+ "BALC-lib/sounds/sounds_drums/drums/";
 	~bufs = (~percpath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 	~bufs.postln;
 //==============================basses===============================
-~basspath = Platform.userExtensionDir +/+ "BASynths/sounds/sounds_drums/basses/";
+~basspath = Platform.userExtensionDir +/+ "BALC-lib/sounds/sounds_drums/basses/";
 	~bufs2 = (~basspath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 			~bufs2.postln;
 //==============================pads===============================
-~padpath = Platform.userExtensionDir +/+ "BASynths/sounds/sounds_drums/pads/";
+~padpath = Platform.userExtensionDir +/+ "BALC-lib/sounds/sounds_drums/pads/";
 	~bufs3 = (~padpath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 			~bufs3.postln;
 //==============================voices===============================
-~voicepath = Platform.userExtensionDir +/+ "BASynths/sounds/sounds_drums/voices/";
+~voicepath = Platform.userExtensionDir +/+ "BALC-lib/sounds/sounds_drums/voices/";
 	~bufs4 = (~voicepath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 			~bufs4.postln;

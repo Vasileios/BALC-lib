@@ -37,7 +37,7 @@ BASamplerLiveAn{
   
 			// setup sample paths and \bf synth
 
-~samplespath =  Platform.userExtensionDir +/+ "BASynths/sounds/stereo/";
+~samplespath =  Platform.userExtensionDir +/+ "BALC-lib/sounds/stereo/";
 	~bufferSampler1 = (~samplespath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 	~bufferSampler1.postln;
