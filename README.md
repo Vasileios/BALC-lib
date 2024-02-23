@@ -1,9 +1,28 @@
 # BALiveCodingEnv
-Live Coding Environment
-Create BASynths folder inside SuperCollider Extensions folder 
-Put BALiveCodingEnv folder into Extensions->BASynths directory 
 
-//run the drum Kit
+Live Coding Environment
+
+Put BALC lib into your SuperCollider Extensions folder and recompile class library
+
+To run the lib in superCollider do the following:
+
+//run first the synths environment
+
+====================================================Synths==============================================================
+
+
+BASynthGens();
+
+//====================================================Track1==============================================================
+
+//fm
+
+//manipulate sound
+
+~fm = Pbindef(\fm, \freq, Prand([200, 2333, 122, 13.3], inf), \modfreq, Prand([200, 2333, 122, 13.3], inf), \ind, Prand([200, 2333, 122, 13.3], inf), \vol, 0.4, \fade, 2, \dur, 2,  \amp, 0.6, \pan, Prand((-1..1), inf)).play;
+
+
+//then run the drum Kit environment
 
 BADrumKitEnv();
 
@@ -17,8 +36,7 @@ MyEnvir.metronomos.tempo_(1)//Set up metronome
 
 //====================================================Track1==============================================================
 
-
-//Play patterns
+//manipulate sound
 
 //Snare
 
@@ -36,6 +54,7 @@ Do the same with other instruments:
 
 ...etc.
 
-Have Fun!!
+
+# Have Fun!!
 
 
