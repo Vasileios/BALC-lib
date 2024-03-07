@@ -38,8 +38,8 @@ BASynthGrainAn{
 		
 
 		//setup sample paths and \bf synth
-							~samplespath =  Platform.userExtensionDir +/+ "BALC-lib/sounds/mono/"; // drums
-	~bufferGrain = (~samplespath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
+							~samplespathm =  Platform.userExtensionDir +/+ "BALC-lib/sounds/mono/"; // drums
+	~bufferGrain = (~samplespathm ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 	~bufferGrain.postln;
 
