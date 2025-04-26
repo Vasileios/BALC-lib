@@ -88,5 +88,6 @@ BAMetro.dactyl(6, repeat:inf)
 
 [ 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5 ]
 
+~kick1 = Pbindef(\kick1, \freq,120, \dur, BAMetro.dactyl(6, repeat:inf)*0.5, \amp, 0.9, \shape,[0.01, 0.2],\buf, ~bufs[0], \pan, 0.1).play;
 
 # Have Fun!!
