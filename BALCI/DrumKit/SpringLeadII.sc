@@ -1,3 +1,7 @@
+// =====================================================================
+// SuperCollider Workspace - VA2016
+// BASynths version I
+// =====================================================================
 SpringLeadII{
 
 	classvar <>server;
@@ -28,7 +32,6 @@ SpringLeadII{
 
 Pbindef(\harpy02, \freq, 620, \dur, Pseq([0.5, 0.5, 0.5, 0.5], inf), \amp, Prand([0.4, 0.3, 0.5, 0.36], inf));
 
-		//~t = TempoClock(4/4);
 
 0.5.wait;
 
@@ -38,5 +41,5 @@ Pbindef(\harpy02, \freq, 620, \dur, Pseq([0.5, 0.5, 0.5, 0.5], inf), \amp, Prand
 
 		"Pbindef(\\harpy02) -> args: \\freq, \\dur, \\amp, \\pan".postln;
 	}
-	
+
 }

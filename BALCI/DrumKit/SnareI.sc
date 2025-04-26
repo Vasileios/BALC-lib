@@ -1,3 +1,7 @@
+// =====================================================================
+// SuperCollider Workspace - VA2016
+// BASynths version I
+// =====================================================================
 SnareI {
 
 	classvar <>server;
@@ -24,7 +28,7 @@ SnareI {
 
 ~snare1	=  Pbindef(\snare).fadeTime_(1);
 		~f = fork{
-			
+
 				~metronomos = TempoClock(1); // create a TempoClock
 
 // schedule an event at next whole beat
@@ -42,9 +46,7 @@ SnareI {
 			~snare1	= Pbindef(\snare, \buf, ~bufs[3]);
 0.1.wait;
 
-~snare1	=Pbindef(\snare, \dur, Pseq([1, 0, 1, 0], inf), \amp, 0.00001, \freq, 400);//.play(metronomos, quant: 4);
-
-		//~t = TempoClock(4/4);
+~snare1	=Pbindef(\snare, \dur, Pseq([1, 0, 1, 0], inf), \amp, 0.00001, \freq, 400);
 
 			0.5.wait;
 

@@ -1,3 +1,7 @@
+// =====================================================================
+// SuperCollider Workspace - VA2016
+// BASynths version I
+// =====================================================================
 KickI {
 
 	classvar <>server;
@@ -45,7 +49,7 @@ KickI {
 		 	 ~kick1 = Pbindef(\kick1, \instrument, \bf, \out, ~mbus1).play(~metronomos, quant: 4);
 
 
-			
+
 
 };
 

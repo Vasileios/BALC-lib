@@ -1,3 +1,7 @@
+// =====================================================================
+// SuperCollider Workspace - VA2016
+// BASynths version I
+// =====================================================================
 SpringLeadI{
 
 	classvar <>server;
@@ -38,7 +42,6 @@ SpringLeadI{
 
 Pbindef(\harpy01, \freq, 620, \dur, Pseq([0.5, 0.5, 0.5, 0.5], inf), \amp, Prand([0.4, 0.3, 0.5, 0.36], inf));
 
-		//~t = TempoClock(4/4);
 
 0.5.wait;
 

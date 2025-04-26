@@ -1,3 +1,7 @@
+// =====================================================================
+// SuperCollider Workspace - VA2016
+// BASynths version I
+// =====================================================================
 VoiceI{
 
 	classvar <>server;
@@ -36,9 +40,8 @@ VoiceI{
  ~voice1 = Pbindef(\voice1, \buf, ~bufs4[0]);
 0.1.wait;
 
-~voice1 = Pbindef(\voice1, \freq, 620, \dur, Pseq([0.5, 0.5, 0.5, 0.5], inf), \amp, 0.000001/*Prand([0.4, 0.3, 0.5, 0.36], inf)*/);
+~voice1 = Pbindef(\voice1, \freq, 620, \dur, Pseq([0.5, 0.5, 0.5, 0.5], inf), \amp, 0.000001);
 
-		//~t = TempoClock(4/4);
 
 0.5.wait;
 

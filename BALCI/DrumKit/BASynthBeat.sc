@@ -1,7 +1,7 @@
 // =====================================================================
-// SuperCollider Workspace
+// SuperCollider Workspace - VA2016
+// BASynths version I
 // =====================================================================
-
 
 BASynthBeat{
 
@@ -139,7 +139,7 @@ server.waitForBoot{
 	Ndef(\p10).put(0, { InFeedback.ar(~mbus16, 2) }).fadeTime_(0.2).play;
 
 	// tempo clocks
-	
+
 ~metronomos = TempoClock(140/60).permanent_(true);
 
 
@@ -213,31 +213,7 @@ SnareII(s)
 Pdef.all.asCompileString;
 
 
-/*
-~kick1 = Pbindef(\kick1).fadeTime_(1);
-if(
-~kick1 = true, { fork{
- Pbindef(\kick1, \buf, ~bufs[0]);
-0.1.wait;
-//~kick1 = Pbindef(\kick1, \buf, ~bufs[0]);
-~t = TempoClock(4/4);
 
-0.5.wait;
-
- Pbindef(\kick1, \instrument, \bf, \out, ~mbus1).play(~t, quant: 4);
-};}.postln;,{nil}
-
-);
-*/
-/*
-KickI(server);
-KickII(server);
-SnareI(server);
-SnareII(server);
-HihatII(server);
-HihatII(server);
-*/
-//~allDrums = [
 ~kick1 = Pbindef(\kick1).fadeTime_(1);
 ~kick2  = Pbindef(\kick2).fadeTime_(1);
 ~kick3 = Pbindef(\kick3).fadeTime_(1);
@@ -248,8 +224,7 @@ HihatII(server);
 ~hihat2 = Pbindef(\hihat2).fadeTime_(1);
 ~crash1 = Pbindef(\crash).fadeTime_(1);
 ~bass1 = Pbindef(\bass).fadeTime_(1);
-//];
-//~drums = Ppar(~allDrums);
+
 /////////////PADS//////////////
 
 ~pad1 = Pbindef(\blnk).fadeTime_(1);
@@ -265,38 +240,8 @@ Pbindef(\voice1).fadeTime_(1);
 //Pbindef(\silent).fadeTime_(1);
 //Pbindef(\surfactant_15_xilo).fadeTime_(1);
 //	server.sync;
-/*
-if (~kick1.value, { fork{ 0.1.wait; ~t = TempoClock(4/4); 0.1.wait;
- Pbindef(\kick1, \buf, ~bufs[0]); 0.5.wait;
- Pbindef(\kick1, \instrument, \bf, \out, ~mbus1).play(~t, quant: 4);
- }; }, {nil}
-);
-*/
-//seting up kick1
-
-//~kick1buf = Pbindef(\kick1, \buf, ~bufs[0]);
-//~kick1bus = Pbindef(\kick1, \instrument, \bf, \out, ~mbus1);
-
-
-
-// set up patterns
-
-// Fixed pattern blocks
-// patterns
-~eighth = Pseq([0.5, 0.5, 0.5, 0.5], 1);
-~dactyl = Pseq([1, 0.5, 0.5], 1);
-~anapest = Pseq([0.5, 0.5, 1], 1);
-~trochee = Pseq([1, 0.5], 1);
-~iamb = Pseq([0.5, 1], 1);
 
 ////////////////////
-// livecoding example
-
-		
-
-//hi-hat
-
-
 
 
 	// set start button to zero upon a cmd-period

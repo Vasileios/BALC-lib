@@ -1,3 +1,7 @@
+// =====================================================================
+// SuperCollider Workspace - VA2016
+// BASynths version I
+// =====================================================================
 HihatI {
 
 	classvar <>server;
@@ -15,7 +19,7 @@ HihatI {
 
 		obj.init(n);
 
-		//obj.initPattern;
+
 
 		^obj;
 	}
@@ -25,21 +29,7 @@ HihatI {
 
 	~hihat1 =  Pbindef(\hihat1).fadeTime_(1);
 		~f = fork{
-			/*
-~t = TempoClock(1); // create a TempoClock
 
-// schedule an event at next whole beat
-~t.schedAbs(~t.beats.ceil, { arg beat, sec; [beat, sec]; 1 });
-
-			~t.tempo = 1;
-
-			~t.tempo.postln;
-			"~t->t.tempo = 1".postln;
-
-
-			//~hihat1 =Pbindef(\hihat1, \buf, ~bufs[4]);
-
-			*/
 			~metronomos = TempoClock(1); // create a TempoClock
 
 // schedule an event at next whole beat
@@ -49,21 +39,11 @@ HihatI {
 
 			~metronomos.tempo.postln;
 			"~metronomos->t.tempo = 1".postln;
-/*
-metronomos = TempoClock(1);
-			metronomos.schedAbs(metronomos.beats.ceil, { arg beat, sec; [beat, sec]; 1 });
 
-			metronomos.tempo = 1;
-
-			metronomos.tempo.postln;
-			"metronomos->t.tempo = 1".postln;
-*/
 			~hihat1  =Pbindef(\hihat1, \buf, ~bufs[4]);
 			0.1.wait;
 
-~hihat1 =Pbindef(\hihat1, \freq, 630, \dur, Pseq([0.25, 0.25, 0.25, 0.25], inf), \amp, 0.0 );//.play(metronomos, quant: 4);
-
-		//~t = TempoClock(4/4);
+~hihat1 =Pbindef(\hihat1, \freq, 630, \dur, Pseq([0.25, 0.25, 0.25, 0.25], inf), \amp, 0.0 );
 
 			0.5.wait;
 
