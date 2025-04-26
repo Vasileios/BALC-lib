@@ -54,44 +54,15 @@ Do the same with other instruments:
 ~hihat2 = Pbindef(\hihat2, ...).play
 
 ...etc.
+///Filtering
 
-//try also to run the drum Kit version II environment - 
+Use BASelectname class example:
 
-!! recompile first
+Put filters:
+BASelectName.filter(\snare).put(1, \filter-> {|in| Ringz.ar(in, 2616, 0.04, 0.2)});
+BASelectName.filter(\snare).put(2, \filter-> {|in| GVerb.ar(in, 10, 0.3, 0.5, 0.5, 15, 1, 0.7, 0.5, 300, 0.7)});
 
-Then do the following:
-
-====================================================DrumKitII==============================================================
-//run drumkit II
-BADrumKitEnv();
-
-//check samples - buffers
-
-MyEnvir.bufs[0];
-
-MyEnvir.metronomos.tempo_(1)//Set up metronome
-
-//====================================================Track1==============================================================
-
-//manipulate sound
-
-//Snare
-
-~snare1 = Pbindef(\snare, \freq,60, \dur, 0.5, \amp, 1, \vol, 1,\shape,1,\buf, MyEnvir.bufs[3].postln, \pan, 0.4).play;
-
-Do the same with other instruments:
-
-~kick1 = Pbindef(\kick1, ...).play
-
-~kick2 = Pbindef(\kick2, ...).play
-
-~hihat1 = Pbindef(\hihat1, ...).play
-
-~hihat2 = Pbindef(\hihat2, ...).play
-
-...etc.
-
+Remove filters:
+BASelectName.filter(\snare).put(1, nil);
 
 # Have Fun!!
-
-
