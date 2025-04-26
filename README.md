@@ -75,4 +75,18 @@ Remove filters example:
 
 BASelectName.filter(\snare).put(1, nil);
 
+
+# Rhythmic patterns
+
+Use BAMetro to create rhythmic patterns.
+
+Example:
+
+Dactyl hexameter form of meter:
+
+BAMetro.dactyl(6, repeat:inf)
+
+[ 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5 ]
+
+
 # Have Fun!!
